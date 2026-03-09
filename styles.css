@@ -99,7 +99,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--white) 0%, var(--beige) 100%);
+    background: var(--white);
 }
 
 .hero {
