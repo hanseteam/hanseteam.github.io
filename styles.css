@@ -1,0 +1,447 @@
+/* ============================================
+   Color Palette
+   ============================================ */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --beige: #f5f1ed;
+    --pastel-red: #f4b5b5;
+    --pastel-blue: #b8d4e8;
+    --gray-light: #f9f9f9;
+    --gray-dark: #333333;
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--gray-dark);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: 0.1em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--pastel-red);
+}
+
+.nav-link.active {
+    color: var(--pastel-red);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--pastel-red);
+}
+
+/* ============================================
+   Home Section
+   ============================================ */
+.home-section {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--white) 0%, var(--beige) 100%);
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--pastel-red);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background-color: var(--pastel-blue);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 2px solid var(--pastel-blue);
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.cta-button:hover {
+    background-color: var(--white);
+    border-color: var(--pastel-blue);
+    color: var(--black);
+}
+
+/* ============================================
+   Content Container
+   ============================================ */
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.content-container h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.section-subtitle {
+    color: var(--pastel-red);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* ============================================
+   About Section
+   ============================================ */
+.about-section {
+    background-color: var(--white);
+    min-height: 100vh;
+}
+
+.about-content {
+    margin-top: 2.5rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+}
+
+.about-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.intro {
+    font-size: 1.2rem;
+    color: var(--pastel-blue);
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   Shop Section
+   ============================================ */
+.shop-section {
+    background-color: var(--white);
+    min-height: 100vh;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.product-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.02);
+}
+
+.beige-bg {
+    background-color: var(--beige);
+}
+
+.white-bg {
+    background-color: var(--gray-light);
+    border: 1px solid #eee;
+}
+
+.pastel-blue-bg {
+    background-color: var(--pastel-blue);
+}
+
+.pastel-red-bg {
+    background-color: var(--pastel-red);
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.price {
+    font-size: 1rem;
+    color: var(--pastel-red);
+    font-weight: 500;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+.contact-section {
+    background-color: var(--white);
+    min-height: 100vh;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contact-info h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--gray-dark);
+}
+
+/* ============================================
+   Contact Form
+   ============================================ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--pastel-blue);
+    background-color: var(--white);
+}
+
+.submit-button {
+    padding: 0.9rem 1.5rem;
+    background-color: var(--pastel-red);
+    color: var(--white);
+    border: 2px solid var(--pastel-red);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+.submit-button:hover {
+    background-color: var(--white);
+    color: var(--pastel-red);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-container h1 {
+        font-size: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .shop-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-menu {
+        gap: 0.8rem;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+    }
+
+    .content-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
